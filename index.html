@@ -1,0 +1,357 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+  <!-- ============================================================
+       ANALYTICS (optional)
+       Andy Zeng's original Google Analytics tracking ID has been
+       removed. If you want analytics on your own site, create a GA4
+       property at https://analytics.google.com, then uncomment the
+       block below and swap in your own measurement ID.
+  ============================================================= -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
+  <!-- TODO: this is your browser tab title - put your name + a short tagline.
+       Example: <title>Kaitlin Smith - PhD Student, USC</title> -->
+  <title>Kaitlin Zareno</title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1000">
+
+  <!-- Isotope JS (powers the Highlights / Publications / Talks / Misc filter buttons) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+  <!-- Custom Style -->
+  <!-- NOTE: this file only contains the HTML. You'll still need style.css
+       (and an images/ folder for your photo, videos, thumbnails, etc.)
+       from https://github.com/andyzeng/andyzeng.github.io sitting next to it. -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+  </style>
+</head>
+
+<body id="body">
+<div id="main">
+
+  <div id="intro">
+    <div id="intro-text">
+
+      <!-- TODO: your displayed name -->
+      <h1>Kaitlin Zareno</h1>
+
+      <p>
+        Hi! I'm Kait, a 3rd-year Computer Science PhD student at the <a href="https://www.usc.edu/">University of Southern California</a> (Fight on!). I am incredibly fortunate to be co-advised by Professor <a href="https://viterbi.usc.edu/directory/faculty/Mataric/Maja">Maja Matarić</a> in the <a href="https://uscinteractionlab.web.app/">Interaction Lab</a> and Professor <a href="https://viterbi.usc.edu/directory/faculty/Narayanan/Shrikanth">Shri Narayanan</a> in the <a href="https://sail.usc.edu/">Signal Analysis and Interpretation Lab (SAIL)</a>.
+
+        I'm interested personalized wellbeing and understanding how people recover from everyday stressors. To that end, my research centers around understanding longitudinal bio-behavioral dynamics, particularly in response to mental health interventions. I aim to build intelligent, adaptive technologies by translating complex physiological and behavioral data into actionable, personalized insights that promote long-term mental wellness.
+
+      <div id="more-bio" style="display: None">
+        <br>
+        <p>Prior to USC, I received both my Bachelor's and MEng degrees in Computer Science from the Massachusetts Institute of Technology (MIT) in 2023 and 2024. While at MIT, I was a member of the women's varsity soccer team and conducted research in both the <a href="https://tadesselab.mit.edu/">Tadesse Lab</a> and the MIT Media Lab's <a href="https://www.media.mit.edu/groups/personal-robots/overview/">Personal Robots Group</a>.</p>
+      </div>
+
+      <br>
+
+      <!-- This link toggles the paragraph above open/closed. Relabel or
+           re-comment it out if you'd rather not have a "click to expand" bio. -->
+      <a href="javascript:toggle_bio()">More about me</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <!-- ============================================================
+           SOCIAL LINKS + EMAIL
+           You said you don't have these yet, so the whole row is
+           commented out. Uncomment and fill in whichever you want
+           to show - delete any line you don't need.
+      ============================================================= -->
+      <!--
+      <a href="https://twitter.com/yourhandle">X (Twitter)</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://scholar.google.com/citations?user=YOUR_ID">G. Scholar</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      -->
+      <a href="https://scholar.google.com/citations?user=Pezow50AAAAJ">G. Scholar</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://github.com/kzareno">Github</a>
+      <br><br>
+      kzareno at usc dot edu
+      <br><br>
+
+      </p>
+    </div>
+
+    <div id="intro-image">
+      <!-- TODO: add a headshot. Drop the image in an images/ folder, then
+           point to it here, e.g.: -->
+      <img src="images/zareno_katilin_headshot.jpg">
+    </div>
+  </div>
+
+  <div id="filters" class="button-group">
+    <button class="button is-checked" data-filter=".highlight">Highlights</button>
+    <button class="button" data-filter=".publication">Publications</button>
+    <button class="button" data-filter=".project">Projects</button>
+    <button class="button" data-filter=".honor">Honors</button>
+    <button class="button" data-filter=".misc">Misc</button>
+  </div>
+
+  <div class="grid">
+
+    <!-- ============================================================
+         FEATURED PREVIEW VIDEOS (optional)
+         Andy uses this row for 3 looping video teasers of his flagship
+         projects, shown above the Highlights list. You don't have any
+         project videos yet - commented out for now. Format, once you do:
+    ============================================================= -->
+    <!--
+    <div class="list-item highlight previews" data-category="highlight">
+      <a href="https://your-project-page.com/"><video class="preview1" playsinline muted autoplay loop><source src="images/video-project1.mp4" type="video/mp4"></video></a>
+      <a href="https://your-project-page.com/"><video class="preview2" playsinline muted autoplay loop><source src="images/video-project2.mp4" type="video/mp4"></video></a>
+      <a href="https://your-project-page.com/"><video class="preview3" playsinline muted autoplay loop><source src="images/video-project3.mp4" type="video/mp4"></video></a>
+    </div>
+    -->
+
+    <!-- ============================================================
+         HIGHLIGHTS
+         Awards, press, milestones - shown under the "Highlights" filter.
+         Each entry is one <div>. <p class="date"> holds a year, or can be
+         left empty to "continue" under the previous entry's year. You
+         don't have any of these yet - example below:
+    ============================================================= -->
+    <div id="main-highlights">
+      <!--
+      <div class="list-item highlight" data-category="highlight">
+        <p class="date">2027</p>Conference on Robot Learning (CoRL) <a href="https://example.com">Best Paper Award</a>
+      </div>
+
+      <div class="list-item highlight" data-category="highlight">
+        <p class="date"></p>USC News article <a href="https://example.com">"How Robots Could Help You Recover From Stress"</a>
+      </div>
+      -->
+    </div>
+
+    <!-- Once you have a Google Scholar profile, you can link it here -->
+    
+    <div class="list-item publication description" data-category="publication">
+      For a more up-to-date list, visit my <a href="https://scholar.google.com/citations?user=Pezow50AAAAJ">Google Scholar</a>
+    </div>
+   
+
+    <!-- ============================================================
+         PUBLICATIONS
+         Shown under the "Publications" filter. Each entry is a thumbnail
+         (a looping video OR a static image) plus a project-description
+         block: title+link, authors, venue/year, an optional award line,
+         then PDF/Code/Webpage/etc links. No papers yet - two example
+         formats below so you can see both thumbnail styles:
+    ============================================================= -->
+    <div id="main-publications">
+      <div class="list-item publication" data-category="publication">
+        <div class="project-description">
+          <h3><a href="https://ieeexplore.ieee.org/abstract/document/11523356">Embodied Agent-Facilitated Virtual Support Groups for University Students</a></h3>
+          <p>
+             Mina Kian, Yunwen Wang, Shriya Upadhyay, Zongjian Li, Abhyuday Singh, Yuanfeixue Nan, Mallory North, Kaitlin Zareno, Pau Sang, Wallace Browning, Jessica Wang, Lynn Carol Miller,Mohammad Soleymani,Maja Matarić <br>
+            <i>IEEE Transactions on Affective Computing (2026)</i><br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/11523356">Webpage</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+          </p>
+        </div>
+      </div>
+     
+
+      <!-- Example with a VIDEO thumbnail:
+      <div class="list-item publication" data-category="publication">
+        <a href="https://your-paper-page.com/" class="thumbnail">
+          <video playsinline muted autoplay loop width="180px">
+            <source src="images/video-your-paper.mp4" type="video/mp4">
+          </video>
+        </a>
+        <div class="project-description">
+          <h3><a href="https://your-paper-page.com/">Your Paper Title Goes Here</a></h3>
+          <p>
+            Kaitlin [Last Name], Co-Author Name, Maja Matarić, Shrikanth Narayanan<br>
+            <i>Conference Name (Acronym) 2027</i><br>
+            <a href="https://your-paper-page.com/">Webpage</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+            <a href="https://arxiv.org/abs/xxxx.xxxxx">PDF</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+            <a href="https://github.com/yourusername/your-repo">Code</a>
+          </p>
+        </div>
+      </div>
+      -->
+
+      <!-- Example with an IMAGE thumbnail and an award line:
+      <div class="list-item publication" data-category="publication">
+        <a href="https://your-paper-page.com/" class="thumbnail"><img src="images/your-paper-teaser.png" alt="" /></a>
+        <div class="project-description">
+          <h3><a href="https://your-paper-page.com/">Another Paper Title</a></h3>
+          <p>
+            Kaitlin [Last Name], Co-Author Name<br>
+            <i>Conference Name (Acronym) 2027</i><br>
+            <font color="49bf9"><i>&#9733; Best Student Paper Award &#9733;</i></font><br>
+            <a href="https://arxiv.org/abs/xxxx.xxxxx">PDF</a>
+          </p>
+        </div>
+      </div>
+      -->
+    </div>
+
+    <!-- Toggle button for older/additional publications. Harmless to leave
+         in even while #more-publications below is empty - it just won't
+         reveal anything new yet. -->
+    <div class="list-item publication toggle-button" data-category="publication">
+      <a id="toggle_publications_button" href="javascript:toggle_publications()">Show more publications</a>
+    </div>
+
+    <!-- Older / additional publications go here, same format as #main-publications above -->
+    <div id="more-publications" style="display: None">
+    </div>
+
+    <!-- ============================================================
+         Projects
+         Shown under the "Talks" filter. Same date + description pattern.
+    ============================================================= -->
+    <div id="main-Projects">
+
+      <div class="list-item project" data-category="projects">
+        <p class="date">2024</p><a href = "https://uscinteractionlab.web.app/project/SAR_CBT">Socially Assistive Robots for Personalized Cognitive Behavioral Therapy <br>
+        This research is supported by the NIH grant <a href = 'https://reporter.nih.gov/search/l8sqmMXycEaOMmv3hQHU1A/project-details/11064932'>R01MH139134</a>, SCH: Personalized AI-Driven Models for Supporting User Engagement and Adherence in Health Interventions: Validation in Cognitive Behavioral Therapy for Anxiety.
+      </div>
+      
+      <div class="list-item project" data-category="projects">
+        <p class="date">2024</p>Physiological Recovery Dynamics in SAR-Guided CBT Interventions<br>
+        This research is supported by the NIH grant <a href = 'https://reporter.nih.gov/search/l8sqmMXycEaOMmv3hQHU1A/project-details/11064932'>R01MH139134</a>.
+      </div>
+
+      <div class="list-item project" data-category="projects">
+        <p class="date"></p> Detecting and mapping stress patterns across space and time: Multimodal modeling of individuals in real-world physical and social work environments.
+        This research is supported by NSF Smart Connected Health
+      </div>
+
+      <div class="list-item project" data-category="projects">
+        <p class="date">2024</p><a href = "https://uscinteractionlab.web.app/project/facilitation">Socially Assistive Robotics for Facilitation of a Support Group <br>
+        This research is supported by NSF HCC Medium grant for "Agent-Facilitated, Video-Mediated Multiparty Interactions in Support Groups", NSF CNS 2233191.
+      </div>
+     
+    </div>
+
+    <!-- ============================================================
+         TALKS
+         Shown under the "Talks" filter. Same date + description pattern.
+    ============================================================= -->
+    <div id="main-Honors"></div>
+      <div class="list-item honor" data-category="honor">
+        <p class="date">2023</p> MIT Eta Kappa Nu (HKN)
+      </div>
+    </div>
+
+    <!-- ============================================================
+         MISC
+         Reviewing, mentoring, service roles, smaller press mentions, etc.
+    ============================================================= -->
+    <!--
+    <div class="list-item misc" data-category="misc">
+      <p class="date"></p>Reviewer, ACM International Conference on Multimodal Interaction (ICMI)
+    </div>
+    -->
+
+  </div>
+
+  <div id="footer">Website template by <a href="https://github.com/andyzeng/andyzeng.github.io">Andy Zeng</a>. Taken from <a href="https://lydiaignatova.github.io/">Lydia Ignatova</a>.</div>
+
+</div>
+
+<script>
+
+  // Isotope grid.
+  var $grid = $('.grid').isotope({
+    itemSelector: '.list-item',
+    layoutMode: 'fitRows',
+    transitionDuration: 0,
+    stagger: 10,
+    initLayout: false,
+    getSortData: {
+      name: '.name',
+      symbol: '.symbol',
+      number: '.number parseInt',
+      category: '[data-category]',
+      weight: function( itemElem ) {
+        var weight = $( itemElem ).find('.weight').text();
+        return parseFloat( weight.replace( /[\(\)]/g, '') );
+      }
+    }
+  });
+
+  // Bind filter button click.
+  $('#filters').on( 'click', 'button', function() {
+    var filterValue = $( this ).attr('data-filter');
+    localStorage.setItem('filterValue', filterValue);
+    $grid.isotope({ filter: filterValue });
+  });
+
+  // Change is-checked class on buttons.
+  $('.button-group').each( function( i, buttonGroup ) {
+    var $buttonGroup = $( buttonGroup );
+    $buttonGroup.on( 'click', 'button', function() {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $( this ).addClass('is-checked');
+    });
+  });
+
+  function update_isotope() {
+    // Retrieve cached button click.
+    var defaultFilterValue = localStorage.getItem('filterValue');
+    if (defaultFilterValue == null) {
+      defaultFilterValue = ".highlight"
+    }
+    $grid.isotope({ filter: defaultFilterValue });
+    var buttons = document.getElementsByClassName("button");
+    for (var currButton of buttons) {
+      if (currButton.getAttribute('data-filter') == defaultFilterValue) {
+        currButton.classList.add('is-checked');
+      } else {
+        currButton.classList.remove('is-checked');
+      }
+    }
+  }
+
+  function toggle_bio() {
+    var x = document.getElementById("more-bio");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function toggle_publications() {
+    var x = document.getElementById("main-publications");
+    var y = document.getElementById("more-publications");
+    var b = document.getElementById("toggle_publications_button")
+    if (y.style.display === "none") {
+      x.style.display = "none";
+      y.style.display = "block";
+      b.innerHTML = "Show less publications"
+      update_isotope();
+    } else {
+      x.style.display = "block";
+      y.style.display = "none";
+      b.innerHTML = "Show more publications"
+      update_isotope();
+    }
+  }
+
+  update_isotope();
+
+</script>
+</body>
+</html>
