@@ -165,7 +165,12 @@ h2 {
 /**************************************************/
 /* Isotope grid list of items. */
 
+/* .grid {
+  padding-bottom: 6em;
+} */
+
 .grid {
+  position: relative;
   padding-bottom: 6em;
 }
 
@@ -300,12 +305,11 @@ h3 a:hover {
 /* Subtle footer at the bottom of the page. */
 
 #footer {
+  width: 54em;
+  margin: 3em auto 2em auto;
   color: #a0a8b0;
-  position: static;
-  clear: both;
-  margin-top: 60px;
   line-height: 2.5em;
-  text-align: center;
+  text-align: left;
 }
 
 /* #footer {
